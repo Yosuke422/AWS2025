@@ -1,0 +1,227 @@
+{
+  "api": {
+    "APIexportCrypto": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "signeData"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "users": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "saveUserYouss"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getUser"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "aws20251795e013": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "fetchCryptoPrices": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "tableCryptoPrices"
+        },
+        {
+          "attributes": [
+            "BucketName"
+          ],
+          "category": "storage",
+          "resourceName": "storageExportCrypto"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getUser": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "usersyouss"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "saveUserYouss": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "usersyouss"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "signeData": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "tableCryptoPrices"
+        },
+        {
+          "attributes": [
+            "BucketName"
+          ],
+          "category": "storage",
+          "resourceName": "storageExportCrypto"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_fetchCryptoPrices_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchCryptoPrices"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchCryptoPrices_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchCryptoPrices"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUser_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUser"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUser_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUser"
+        }
+      ]
+    },
+    "AMPLIFY_function_saveUserYouss_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "saveUserYouss"
+        }
+      ]
+    },
+    "AMPLIFY_function_saveUserYouss_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "saveUserYouss"
+        }
+      ]
+    },
+    "AMPLIFY_function_signeData_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "signeData"
+        }
+      ]
+    },
+    "AMPLIFY_function_signeData_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "signeData"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "storageExportCrypto": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    },
+    "tableCryptoPrices": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "usersyouss": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

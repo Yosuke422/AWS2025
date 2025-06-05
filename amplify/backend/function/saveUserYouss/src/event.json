@@ -1,0 +1,22 @@
+{
+  "httpMethod": "POST",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "queryStringParameters": null,
+  "pathParameters": null,
+  "requestContext": {
+    "requestTimeEpoch": 1600000000000,
+    "requestId": "test-request-id",
+    "identity": {
+      "sourceIp": "127.0.0.1"
+    },
+    "httpMethod": "POST",
+    "path": "/saveUser",
+    "stage": "prod",
+    "resourcePath": "/saveUser",
+    "apiId": "test-api-id"
+  },
+  "body": "{\"name\": \"Youssef Charafeddine\", \"email\": \"unique.test1@example.com\"}",
+  "isBase64Encoded": false
+}

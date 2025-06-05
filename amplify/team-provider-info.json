@@ -1,0 +1,47 @@
+{
+  "youssef": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aws2025-youssef-7fbb7-authRole",
+      "UnauthRoleArn": "arn:aws:iam::101826083820:role/amplify-aws2025-youssef-7fbb7-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::101826083820:role/amplify-aws2025-youssef-7fbb7-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-aws2025-youssef-7fbb7-deployment",
+      "UnauthRoleName": "amplify-aws2025-youssef-7fbb7-unauthRole",
+      "StackName": "amplify-aws2025-youssef-7fbb7",
+      "StackId": "arn:aws:cloudformation:eu-west-1:101826083820:stack/amplify-aws2025-youssef-7fbb7/e1a7a4f0-4207-11f0-ab94-0ae3c57e3831",
+      "AmplifyAppId": "dtqqz98i2ommn"
+    },
+    "categories": {
+      "storage": {
+        "usersyouss": {},
+        "tableCryptoPrices": {},
+        "storageExportCrypto": {}
+      },
+      "function": {
+        "saveUserYouss": {
+          "deploymentBucketName": "amplify-aws2025-youssef-7fbb7-deployment",
+          "s3Key": "amplify-builds/saveUserYouss-44355a616c4f78343753-build.zip"
+        },
+        "getUser": {
+          "deploymentBucketName": "amplify-aws2025-youssef-7fbb7-deployment",
+          "s3Key": "amplify-builds/getUser-4d4b5432485a58524367-build.zip"
+        },
+        "fetchCryptoPrices": {
+          "deploymentBucketName": "amplify-aws2025-youssef-7fbb7-deployment",
+          "s3Key": "amplify-builds/fetchCryptoPrices-7748525734736d5a6f4f-build.zip"
+        },
+        "signeData": {
+          "deploymentBucketName": "amplify-aws2025-youssef-7fbb7-deployment",
+          "s3Key": "amplify-builds/signeData-43634c587a4e7331377a-build.zip"
+        }
+      },
+      "api": {
+        "users": {},
+        "APIexportCrypto": {}
+      },
+      "auth": {
+        "aws20251795e013": {}
+      }
+    }
+  }
+}

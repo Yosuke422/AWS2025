@@ -1,0 +1,18 @@
+{
+  "lambdaLayers": [],
+  "permissions": {
+    "storage": {
+      "tableCryptoPrices": [
+        "create",
+        "read",
+        "update"
+      ],
+      "storageExportCrypto": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}

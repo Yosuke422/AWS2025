@@ -1,0 +1,16 @@
+{
+  "resourceName": "storageExportCrypto",
+  "policyUUID": "e7e49a82",
+  "bucketName": "storageexportcrypto",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

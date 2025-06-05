@@ -1,0 +1,18 @@
+{
+  "whyContinueWithGen1": "Prefer not to answer",
+  "projectName": "aws2025",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist",
+      "BuildCommand": "yarn build",
+      "StartCommand": "yarn dev"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

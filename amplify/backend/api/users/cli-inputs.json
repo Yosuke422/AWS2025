@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "paths": {
+    "/saveUserYouss": {
+      "name": "/saveUserYouss",
+      "lambdaFunction": "saveUserYouss",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/usersyouss/id/{id}": {
+      "name": "/usersyouss/id/{id}",
+      "lambdaFunction": "getUser",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/usersyouss/email/{email}": {
+      "name": "/usersyouss/email/{email}",
+      "lambdaFunction": "getUser",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
